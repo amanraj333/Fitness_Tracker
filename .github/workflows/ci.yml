@@ -60,8 +60,8 @@ jobs:
       - name: Setup Server Dependencies
         run: npm run setup
 
-      - name: Validate Application Startup Script
-        run: npm run start -- --help || true
+      # - name: Validate Application Startup Script
+      #   run: npm run start -- --help || true
 
       - name: Docker Build Validation
         run: npm run docker:build

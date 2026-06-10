@@ -3,6 +3,7 @@ kind: Application
 
 metadata:
   name: fitness-tracker
+  namespace: argocd
 
 spec:
   project: default

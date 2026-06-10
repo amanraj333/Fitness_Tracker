@@ -1,0 +1,17 @@
+replicaCount: 2
+
+image:
+  repository: 3aman/fitness-tracker
+  tag: latest
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 5000
+
+mongodb:
+  image: mongo:7-jammy
+
+env:
+  MONGODB_URI: mongodb://mongodb-service:27017/fitness-tracker
+  NODE_ENV: production
